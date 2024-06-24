@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Participação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        /* Ajuste de largura para os campos específicos */
+        input[name^="horas"], textarea[name^="obs"] {
+            width: 20%; /* Largura ajustada para as horas e observações */
+        }
+        input[name^="estudos"] {
+            width: 40%; /* Largura ajustada para os estudos */
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de Participação</h2>
+    <form action="https://formspree.io/f/xzzppavp" method="POST">
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Participou no Ministério</th>
+                <th>Estudos</th>
+                <th>PA ou PR</th>
+                <th>Horas</th>
+                <th>Obs</th>
+            </tr>
+            <!-- Linhas do formulário -->
+            <tr>
+                <td>1</td>
+                <td><input type="text" name="nome_1"></td>
+                <td>
+                    <input type="radio" id="ministerio-sim_1" name="ministerio_1" value="Sim">
+                    <label for="ministerio-sim_1">Sim</label>
+                    <input type="radio" id="ministerio-nao_1" name="ministerio_1" value="Não">
+                    <label for="ministerio-nao_1">Não</label>
+                </td>
+                <td><input type="text" name="estudos_1"></td>
+                <td>
+                    <input type="radio" id="pa_1" name="pa-pr_1" value="PA">
+                    <label for="pa_1">PA</label>
+                    <input type="radio" id="pr_1" name="pa-pr_1" value="PR">
+                    <label for="pr_1">PR</label>
+                </td>
+                <td><input type="text" name="horas_1"></td>
+                <td><textarea name="obs_1" rows="2" cols="20"></textarea></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" name="nome_2"></td>
+                <td>
+                    <input type="radio" id="ministerio-sim_2" name="ministerio_2" value="Sim">
+                    <label for="ministerio-sim_2">Sim</label>
+                    <input type="radio" id="ministerio-nao_2" name="ministerio_2" value="Não">
+                    <label for="ministerio-nao_2">Não</label>
+                </td>
+                <td><input type="text" name="estudos_2"></td>
+                <td>
+                    <input type="radio" id="pa_2" name="pa-pr_2" value="PA">
+                    <label for="pa_2">PA</label>
+                    <input type="radio" id="pr_2" name="pa-pr_2" value="PR">
+                    <label for="pr_2">PR</label>
+                </td>
+                <td><input type="text" name="horas_2"></td>
+                <td><textarea name="obs_2" rows="2" cols="20"></textarea></td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+            <!-- Linha 3 até Linha 20 -->
+            <!-- Exemplo para Linha 3:
+            <tr>
+                <td>3</td>
+                <td><input type="text" name="nome_3"></td>
+                <td>
+                    <input type="radio" id="ministerio-sim_3" name="ministerio_3" value="Sim">
+                    <label for="ministerio-sim_3">Sim</label>
+                    <input type="radio" id="ministerio-nao_3" name="ministerio_3" value="Não">
+                    <label for="ministerio-nao_3">Não</label>
+                </td>
+                <td><input type="text" name="estudos_3"></td>
+                <td>
+                    <input type="checkbox" id="pa_3" name="pa-pr_3" value="PA">
+                    <label for="pa_3">PA</label>
+                    <input type="checkbox" id="pr_3" name="pa-pr_3" value="PR">
+                    <label for="pr_3">PR</label>
+                </td>
+                <td><input type="text" name="horas_3"></td>
+                <td><textarea name="obs_3" rows="2" cols="20"></textarea></td>
+            </tr>
+            -->
+            <!-- Repita o padrão acima para as linhas restantes -->
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
